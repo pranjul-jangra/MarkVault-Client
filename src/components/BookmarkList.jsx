@@ -35,7 +35,6 @@ const BookmarkList = ({ fetchBookmarks, bookmarks }) => {
       fetchBookmarks();
     } catch (error) {
       toast.error("Failed to delete bookmark");
-      console.error(error.message);
     }finally{
       setLoader(false);
     }

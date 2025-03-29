@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import BookmarkList from "../components/BookmarkList";
+import { toast } from 'react-toastify'
 import BookmarkForm from "../components/BookmarkForm";
 import axiosInstance from "../axiosInstance";
 import '../styles/Dashboard.css'
@@ -16,7 +17,7 @@ const Dashboard = () => {
       const { data } = await axiosInstance.get("/bookmarks");
       setBookmarks(data);
     } catch (error) {
-      console.error("Error fetching bookmarks", error);
+      toast.error('Failed to get bookmarks. Please refresh the page.');
     }finally{
       setLoader(false);
     }

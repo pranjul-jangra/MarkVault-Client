@@ -1,5 +1,6 @@
 import { useRef, useContext } from 'react'
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify'
 import axiosInstance from "../axiosInstance";
 import '../styles/Navbar.css'
 import '../styles/Navbar.css'
@@ -30,7 +31,7 @@ const Navbar = () => {
         window.location.href = "/login";
       }
     } catch (error) {
-      console.error("Error logging out from this device:", error);
+      toast.error('Something went wrong. Failed to logout.')
     }finally{
       setLoader(false);
     }
@@ -39,13 +40,7 @@ const Navbar = () => {
   const handleLogoutAll = async () => {
     try {
       setLoader(true);
-      const email = localStorage.getItem("userEmail");
-  
-      if (!email) {
-        throw new Error("User email not found");
-      }
-  
-      const response = await axiosInstance.post(`/auth/logout-all`, { email });
+      const response = await axiosInstance.post(`/auth/logout-all`);
   
       if (response.status === 200) {
         localStorage.removeItem("accessToken");
@@ -53,7 +48,7 @@ const Navbar = () => {
         window.location.href = "/login";
       }
     } catch (error) {
-      console.error("Error logging out from all devices:", error);
+      toast.error('Something went wrong. Failed to logout.')
     }finally{
       setLoader(false);
     }

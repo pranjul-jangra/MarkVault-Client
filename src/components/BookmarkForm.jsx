@@ -29,7 +29,6 @@ const BookmarkForm = ({ fetchBookmarks }) => {
       toast.success('BookMark added successfully');
 
     } catch (error) {
-      console.error("Error adding bookmark", error);
       toast.error('Error adding bookmark')
     }finally{
       setLoader(false);

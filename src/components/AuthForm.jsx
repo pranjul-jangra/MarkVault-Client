@@ -26,7 +26,6 @@ const AuthForm = ({ type }) => {
       navigate("/dashboard");
 
     } catch (error) {
-      console.error("Authentication failed", error);
       toast.error(error.response.data.message);
     }finally{
       setLoader(false);
