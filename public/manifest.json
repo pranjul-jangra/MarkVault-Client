@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "MarkVault - Bookmark Manager",
+    "version": "1.0",
+    "description": "A full-featured bookmark manager extension.",
+    "permissions": ["storage", "tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "./bookmark.png"
+    },
+    "icons": {
+      "16": "./bookmark.png",
+      "48": "./bookmark.png",
+      "128": "./bookmark.png"
+    }
+}
+  

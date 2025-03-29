@@ -1,0 +1,12 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: calc(100vh - 50px);
+    gap: 30px;
+
+    &>h2{
+        margin-top: 60px;
+    }
+}

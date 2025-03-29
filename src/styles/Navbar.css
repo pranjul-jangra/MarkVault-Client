@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 15px;
+  background: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  background-color: transparent;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1.2px;
+    width: 0;
+    background-color: white;
+    transition: all 0.3s;
+  }
+
+  &:hover::before{
+    left: 0;
+    width: 100%;
+  }
+}
+
+.navbar > div{
+  background-color: transparent;
+}
+
+.logout-trigger{
+  border-radius: 30px;
+  background-color: transparent;
+  position: relative;
+  cursor: default;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin: 0 10px;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1.2px;
+    width: 0;
+    background-color: white;
+    transition: all 0.3s;
+  }
+
+  &:hover::before{
+    left: 0;
+    width: 100%;
+  }
+}
+
+.logout-options{
+  position: absolute;
+  top: 54px;
+  right: 10px;
+  padding: 20px;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 7px 0.1px rgb(72, 72, 72);
+  transition: all 0.3s;
+  translate: 150% 0;
+  opacity: 0;
+
+  &>button{
+    all: unset;
+    padding: 6px 12px;
+    border: 1px solid rgb(41, 41, 41);
+    color: black;
+    border-radius: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    &:hover{
+      background-color: #0071ea;
+      color: white;
+    }
+  }
+}

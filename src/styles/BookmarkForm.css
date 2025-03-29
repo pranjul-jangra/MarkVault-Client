@@ -1,0 +1,50 @@
+.bookmark-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 4px 0.01px grey;
+  margin-bottom: 20px;
+
+  &>h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
+
+  &>button{
+    all: unset;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid grey;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #007bffd2;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s;
+
+    &:hover{
+      background-color: #0071ea;
+    }
+
+    &:focus{
+      outline: 1px solid black;
+    }
+  }
+}
+
+.bookmark-form input,
+.bookmark-form select,
+.bookmark-form textarea {
+  width: 100%;
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
